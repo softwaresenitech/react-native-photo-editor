@@ -283,7 +283,7 @@
                     android:background="@drawable/rounded_border_text_view"
                     android:padding="10dp"
                     android:text="@string/ic_delete"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000000"
                     android:textSize="30sp" />
 
             </RelativeLayout>
