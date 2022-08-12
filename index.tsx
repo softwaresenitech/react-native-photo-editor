@@ -8,7 +8,7 @@ export interface PhotoEditorProps {
     stickers?: string[]
     hiddenControls?: ('text' | 'clear' | 'draw' | 'save' | 'share' | 'sticker' | 'crop')[]
 
-    onDone?: (imagePath: string) => void
+    onDone?: (imagePath: string, kwarg: string) => void
     onCancel?: (resultCode: number) => void
 }
 
@@ -53,8 +53,8 @@ export default class PhotoEditor {
 
         RNPhotoEditor.Edit(
             { colors, hiddenControls, stickers, ...props },
-            (imagePath: string) => {
-                onDone && onDone(imagePath)
+            (imagePath: string, kwarg: string) => {
+                onDone && onDone(imagePath, kwarg)
             },
             (resultCode: number) => {
                 onCancel && onCancel(resultCode)
