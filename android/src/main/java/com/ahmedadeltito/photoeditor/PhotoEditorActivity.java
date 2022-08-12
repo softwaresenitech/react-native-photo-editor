@@ -431,6 +431,7 @@ public class PhotoEditorActivity extends AppCompatActivity implements View.OnCli
                     String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
                     String imageName = "IMG_" + timeStamp + ".jpg";
                     Intent returnIntent = new Intent();
+                    returnIntent.putExtra("kwarg", "ON_SAVE");
 
                     if (isSDCARDMounted()) {
                         String folderName = "PhotoEditorSDK";
