@@ -416,7 +416,7 @@ public class PhotoEditorActivity extends AppCompatActivity implements View.OnCli
         int permissionCheck = PermissionChecker.checkCallingOrSelfPermission(this,
                 android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
-        if (permissionCheck == PackageManager.PERMISSION_GRANTED) {
+
             updateView(View.GONE);
             RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
                     RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
@@ -474,9 +474,6 @@ public class PhotoEditorActivity extends AppCompatActivity implements View.OnCli
                 }
             }.start();
             Toast.makeText(this, getString(R.string.save_image_succeed), Toast.LENGTH_SHORT).show();
-        } else {
-            showPermissionRequest();
-        }
     }
 
 
