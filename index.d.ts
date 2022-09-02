@@ -3,7 +3,6 @@ export interface PhotoEditorProps {
     colors?: string[]
     stickers?: string[]
     hiddenControls?: ('text' | 'clear' | 'draw' | 'save' | 'share' | 'sticker' | 'crop')[]
-
     onDone?: (imagePath: string, kwarg: string) => void
     onCancel?: (resultCode: number) => void
 }
